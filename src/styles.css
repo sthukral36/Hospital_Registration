@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.header {
+    color: #D0D3D4;
+}
+
+body {
+    background-image: url("https://previews.123rf.com/images/279photo/279photo1612/279photo161204550/68032363-concept-of-appointment-to-doctor-online-top-view-on-wooden-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}

@@ -1,0 +1,24 @@
+.home_btn {
+    height: 50px;
+    width: 250px;
+    background-color: #283747;
+    color: #ECF0F1;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.home_btn:hover {
+    transform: scale(1.05) translateY(-.1rem);
+}
+
+.home_btn:focus {
+    outline: none;
+}
+
+.home_btn:active {
+    transform: translateY(.1rem);
+    outline: none;
+}

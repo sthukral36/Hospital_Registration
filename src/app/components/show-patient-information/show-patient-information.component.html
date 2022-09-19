@@ -1,0 +1,38 @@
+<h2 class="header">Enter Patient Id</h2>
+
+<label class="header">Patient Id</label>
+<input (change)="changePatientId($event)" type="text" class="form-control" />
+<button class="btn btn-primary mt-3" (click)="setPatient()">Search Patient</button>
+
+<ng-container *ngIf="selectedPatient?.id">
+    <div class="showpatient__details shadow p-3 mb-3 bg-white rounded">
+        <h2>Patient Details</h2>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Patient Id</p>
+            <p class="showpatient__value">{{selectedPatient?.id}}</p>
+        </div>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Patient Name</p>
+            <p class="showpatient__value">{{selectedPatient?.name}}</p>
+        </div>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Patient Age</p>
+            <p class="showpatient__value">{{selectedPatient?.age}}</p>
+        </div>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Visited Doctor Name</p>
+            <p class="showpatient__value">{{selectedPatient?.doctor_name}}</p>
+        </div>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Prescription</p>
+            <p class="showpatient__value">{{selectedPatient?.prescription}}</p>
+        </div>
+        <div class="showpatient__row">
+            <p class="showpatient__label">Date of Visit</p>
+            <p class="showpatient__value">{{selectedPatient?.date_of_visit}}</p>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="!selectedPatient?.id">
+    <p>No Patient registered with given ID</p>
+</ng-container>

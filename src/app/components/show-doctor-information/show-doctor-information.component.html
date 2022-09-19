@@ -1,0 +1,35 @@
+<div class="showdoctor">
+    <h2 class="header">Please select a name from Dropdown list</h2>
+
+    <form #showDoctorForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="form-group mb-3">
+            <label class="mb-2 header">Doctor Name</label>
+            <select required #docname="ngModel" [class.is-invalid]="docname.invalid && docname.touched"
+                class="custom-select form-control" name="docname" [(ngModel)]="doctorName">
+                <option value="">select a Name</option>
+                <option *ngFor="let doctor of doctors">{{ doctor.name }}</option>
+            </select>
+            <small class="text-danger" [class.d-none]="docname.valid || docname.untouched">Please select a Name</small>
+        </div>
+        <button [disabled]="showDoctorForm.form.invalid" class="btn btn-primary mt-5 mb-3" type="submit">Search
+            Doctor</button>
+    </form>
+
+    <ng-container *ngIf="selectedDoctor?.name">
+        <div class="showdoctor__details shadow p-3 mb-3 bg-white rounded">
+            <h2>Doctor Details</h2>
+            <div class="showdoctor__row">
+                <p class="showdoctor__label">Doctor Name</p>
+                <p class="showdoctor__value">{{selectedDoctor?.name}}</p>
+            </div>
+            <div class="showdoctor__row">
+                <p class="showdoctor__label">Number of Patients attended</p>
+                <p class="showdoctor__value">{{selectedDoctor?.patient_count}}</p>
+            </div>
+            <div class="showdoctor__row">
+                <p class="showdoctor__label">Specialist field</p>
+                <p class="showdoctor__value">{{selectedDoctor?.field}}</p>
+            </div>
+        </div>
+    </ng-container>
+</div>

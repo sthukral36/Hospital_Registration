@@ -1,0 +1,28 @@
+.showdoctor__details {
+    margin-top: 10px;
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    background: #5E5A59;
+}
+
+.showdoctor__details>h2 {
+    margin-bottom: 10px;
+}
+
+.showdoctor__details {
+    margin-top: 10px;
+    width: 500px;
+    padding: 10px;
+}
+
+.showdoctor__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.showdoctor__label {
+    font-weight: 700;
+}
